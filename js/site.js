@@ -257,7 +257,31 @@
 
     e.preventDefault();
     e.stopImmediatePropagation();
+    document.querySelectorAll('.mil-menu-btn, .mil-menu, .mil-menu-frame').forEach(function(el){ el.classList.remove('mil-active'); });
     scrollToTarget(hashPart);
     history.pushState(null, '', hashPart);
   }, true);
+})();
+/* ---------- logo adaptativo (claro/escuro) no frame fixo ---------- */
+(function(){
+  var frameLogos = document.querySelectorAll('.mil-frame .mil-logo img');
+  if(!frameLogos.length) return;
+  var darkSections = document.querySelectorAll('.mil-dark-bg');
+
+  function update(){
+    var checkY = 70;
+    var overDark = false;
+    darkSections.forEach(function(sec){
+      var r = sec.getBoundingClientRect();
+      if(r.top <= checkY && r.bottom >= checkY) overDark = true;
+    });
+    frameLogos.forEach(function(img){
+      var wanted = overDark ? 'wordmark-dark-bg.png' : 'wordmark-light-bg.png';
+      if(img.src.indexOf(wanted) === -1) img.src = img.src.replace(/wordmark-(light|dark)-bg\.png/, wanted);
+    });
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('load', update);
+  update();
 })();

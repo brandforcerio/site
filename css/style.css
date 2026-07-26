@@ -1327,7 +1327,8 @@ menu button
   display: block;
   width: 28px;
   height: 2.5px;
-  background: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  mix-blend-mode: difference;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transition: inherit;
