@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Ideias sobre branding, performance e e-commerce, direto da Brand Force.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8BWQTLLHQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-M8BWQTLLHQ');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '327542032723929'); fbq('track', 'PageView');</script>
+    <noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=327542032723929&ev=PageView&noscript=1"/></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- google fonts: outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap grid css -->
+    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
+    <!-- font awesome css (via cdn - os arquivos de fonte não vieram no pacote baixado) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/plugins/swiper.min.css">
+    <!-- fancybox css -->
+    <link rel="stylesheet" href="css/plugins/fancybox.min.css">
+    <!-- ashley scss -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+
+    <!-- idiomas -->
+    <link rel="alternate" hreflang="pt-BR" href="blog.html">
+    <link rel="alternate" hreflang="en" href="en/blog.html">
+    <link rel="alternate" hreflang="et" href="et/blog.html">
+    <link rel="alternate" hreflang="x-default" href="blog.html">
+    <script>
+    (function(){
+      try{
+        var saved = localStorage.getItem('bf_lang');
+        var page = location.pathname.split('/').pop() || 'blog.html';
+        if(saved === 'en'){ location.replace('en/' + page + location.search); return; }
+        if(saved === 'et'){ location.replace('et/' + page + location.search); return; }
+        if(!saved){
+          var nav = (navigator.language || navigator.userLanguage || 'pt').toLowerCase();
+          if(nav.indexOf('en') === 0){ localStorage.setItem('bf_lang','en'); location.replace('en/' + page + location.search); return; }
+          if(nav.indexOf('et') === 0){ localStorage.setItem('bf_lang','et'); location.replace('et/' + page + location.search); return; }
+          localStorage.setItem('bf_lang','pt');
+        }
+      }catch(e){}
+    })();
+    </script>
+
+    <!-- page name -->
+    <title>Blog — Brand Force</title>
+
+</head>
+
+<body>
+
+    <!-- wrapper -->
+    <div class="mil-wrapper" id="top">
+
+        <!-- cursor -->
+        <div class="mil-ball">
+            <span class="mil-icon-1">
+                <svg viewBox="0 0 128 128">
+                    <path d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2	c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2	L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2L106.1,41.9	z" />
+                </svg>
+            </span>
+            <div class="mil-more-text">More</div>
+            <div class="mil-choose-text">Сhoose</div>
+        </div>
+        <!-- cursor end -->
+
+        <!-- preloader -->
+        <div class="mil-preloader">
+            <div class="mil-preloader-animation">
+                <div class="mil-pos-abs mil-animation-1">
+                    <p class="mil-h3 mil-muted mil-thin">Branding</p>
+                    <p class="mil-h3 mil-muted">com</p>
+                    <p class="mil-h3 mil-muted mil-thin">Performance</p>
+                </div>
+                <div class="mil-pos-abs mil-animation-2">
+                    <div class="mil-reveal-frame">
+                        <p class="mil-reveal-box"></p>
+                        <p class="mil-h3 mil-muted mil-thin">brandforce.rio.br</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- preloader end -->
+
+        <!-- scrollbar progress -->
+        <div class="mil-progress-track">
+            <div class="mil-progress"></div>
+        </div>
+        <!-- scrollbar progress end -->
+
+        <!-- menu -->
+        <div class="mil-menu-frame">
+            <!-- frame clone -->
+            <div class="mil-frame-top">
+                <a href="index.html" class="mil-logo"><img src="img/logo/icon-color-light-bg.png" alt="Brand Force" style="height:34px; width:auto; display:block;"></a>
+                <div class="mil-menu-btn">
+                    <span></span>
+                </div>
+            </div>
+            <!-- frame clone end -->
+            <div class="container">
+                <div class="mil-menu-content">
+                    <div class="row">
+                        <div class="col-xl-5">
+
+                            <nav class="mil-main-menu" id="swupMenu">
+                                <ul>
+                                    <li>
+                                        <a href="index.html">Início</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#estudio">Estúdio</a>
+                                    </li>
+                                    <li class="mil-has-children">
+                                        <a href="index.html#servicos">Serviços</a>
+                                        <ul>
+                                            <li><a href="index.html#servicos">Branding &amp; Identidade</a></li>
+                                            <li><a href="index.html#servicos">Performance Marketing</a></li>
+                                            <li><a href="index.html#servicos">E-commerce 360</a></li>
+                                            <li><a href="index.html#servicos">Infoprodutos</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#clientes">Clientes</a>
+                                    </li>
+                                    <li class="mil-active">
+                                        <a href="blog.html">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contato</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                        <div class="col-xl-7">
+
+                            <div class="mil-menu-right-frame">
+                                <div class="mil-animation-in">
+                                    <div class="mil-animation-frame">
+                                        <div class="mil-animation mil-position-1 mil-scale" data-value-1="2" data-value-2="2"></div>
+                                    </div>
+                                </div>
+                                <div class="mil-menu-right">
+                                    <div class="row">
+                                        <div class="col-lg-8 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-mb-30">Serviços</h6>
+
+                                            <ul class="mil-menu-list">
+                                                <li><a href="index.html#servicos" class="mil-light-soft">Branding &amp; Identidade de Marca</a></li>
+                                                <li><a href="index.html#servicos" class="mil-light-soft">Performance Marketing</a></li>
+                                                <li><a href="index.html#servicos" class="mil-light-soft">E-commerce 360</a></li>
+                                                <li><a href="index.html#servicos" class="mil-light-soft">Lançamento de Infoprodutos</a></li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="col-lg-4 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-mb-30">Redes sociais</h6>
+
+                                            <ul class="mil-menu-list">
+                                                <li><a href="https://www.instagram.com/agenciabrandforce/" target="_blank" rel="noopener" class="mil-light-soft">Instagram</a></li>
+                                                <li><a href="https://www.facebook.com/profile.php?id=61592100826465" target="_blank" rel="noopener" class="mil-light-soft">Facebook</a></li>
+                                                <li><a href="https://www.linkedin.com/company/agencia-brand-force/" target="_blank" rel="noopener" class="mil-light-soft">LinkedIn</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                    <div class="mil-divider mil-mb-60"></div>
+                                    <div class="row justify-content-between">
+
+                                        <div class="col-lg-4 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-mb-30">Rio de Janeiro</h6>
+
+                                            <p class="mil-light-soft mil-up">Brasil <span class="mil-no-wrap">contato@brandforce.rio.br</span></p>
+
+                                        </div>
+                                        <div class="col-lg-4 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-mb-30">Idioma</h6>
+
+                                            <p class="mil-light-soft"><a href="index.html" class="mil-light-soft is-active" data-lang="pt">Português</a> · <a href="en/index.html" class="mil-light-soft" data-lang="en">English</a> · <a href="et/index.html" class="mil-light-soft" data-lang="et">Eesti</a></p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- menu -->
+        
+        <!-- curtain -->
+        <div class="mil-curtain"></div>
+        <!-- curtain end -->
+
+        <!-- frame -->
+        <div class="mil-frame">
+            <div class="mil-frame-top">
+                <a href="index.html" class="mil-logo"><img src="img/logo/icon-color-light-bg.png" alt="Brand Force" style="height:34px; width:auto; display:block;"></a>
+                <div class="mil-menu-btn">
+                    <span></span>
+                </div>
+            </div>
+            <div class="mil-frame-bottom">
+                <div class="mil-current-page"></div>
+                <div class="mil-back-to-top">
+                    <a href="#top" class="mil-link mil-dark mil-arrow-place">
+                        <span>Voltar ao topo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- frame end -->
+        <!-- content -->
+        <div class="mil-content">
+            <div id="swupMain" class="mil-main-transition">
+
+                <!-- banner -->
+                <div class="mil-inner-banner mil-p-0-120">
+                    <div class="mil-banner-content mil-up">
+                        <div class="mil-animation-frame">
+                            <div class="mil-animation mil-position-4 mil-dark mil-scale" data-value-1="6" data-value-2="1.4"></div>
+                        </div>
+                        <div class="container">
+                            <ul class="mil-breadcrumbs mil-mb-60">
+                                <li><a href="index.html">Início</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                            </ul>
+                            <h1 class="mil-mb-60">Ideias sobre <span class="mil-thin">marca</span> <br> e <span class="mil-thin">performance</span></h1>
+                            <a href="#blog" class="mil-link mil-dark mil-arrow-place mil-down-arrow">
+                                <span>Publicações</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- banner end -->
+
+                <!-- popular -->
+                <section class="mil-soft-bg" id="blog">
+                    <div class="container mil-p-120-60">
+                        <div class="row align-items-center mil-mb-30">
+                            <div class="col-lg-6 mil-mb-30">
+                                <h3 class="mil-up">Publicações em destaque:</h3>
+                            </div>
+                            <div class="col-lg-6 mil-mb-30">
+                                <div class="mil-adaptive-right mil-up">
+                                    <a href="#todas" class="mil-link mil-dark mil-arrow-place">
+                                        <span>Ver todas</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="blogPopular">
+                            <!-- preenchido via js/site.js -->
+                        </div>
+                    </div>
+                </section>
+                <!-- popular end -->
+
+                <!-- blog -->
+                <section id="todas">
+                    <div class="container mil-p-120-120">
+                        <div class="row align-items-center mil-mb-30">
+                            <div class="col-lg-4 mil-mb-30">
+                                <h3 class="mil-up">Categorias:</h3>
+                            </div>
+                            <div class="col-lg-8 mil-mb-30">
+                                <div class="mil-adaptive-right mil-up">
+
+                                    <ul class="mil-category-list" id="blogCategories">
+                                        <!-- preenchido via js/site.js -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="blogFullList">
+                            <!-- preenchido via js/site.js -->
+                        </div>
+                    </div>
+                </section>
+                <!-- blog end -->
+
+                <!-- call to action -->
+                <section class="mil-soft-bg">
+                    <div class="container mil-p-120-120">
+                        <div class="mil-center">
+                            <h2 class="mil-up mil-mb-60">Fique por dentro <span class="mil-thin">das</span><br> novidades assinando <span class="mil-thin">nossa</span><br> newsletter!</h2>
+                            <div class="row justify-content-center mil-up">
+                                <div class="col-lg-4">
+                                    <form class="mil-subscribe-form mil-subscribe-form-2 mil-up">
+                                        <input type="email" placeholder="Seu e-mail" required>
+                                        <button type="submit" class="mil-button mil-icon-button-sm mil-arrow-place"></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- call to action end -->
+
+<!-- footer -->
+                <footer class="mil-dark-bg">
+                    <div class="mi-invert-fix">
+                        <div class="container mil-p-120-60">
+                            <div class="row justify-content-between">
+                                <div class="col-md-4 col-lg-4 mil-mb-60">
+
+                                    <div class="mil-muted mil-logo mil-up mil-mb-30"><img src="img/logo/wordmark-dark-bg.png" alt="Brand Force" style="height:44px; width:auto;"></div>
+
+                                    <p class="mil-light-soft mil-up mil-mb-30">Assine nossa newsletter:</p>
+
+                                    <form class="mil-subscribe-form mil-up" id="newsletterForm">
+                                        <input type="email" id="newsletterEmail" placeholder="Seu e-mail" required>
+                                        <button type="submit" class="mil-button mil-icon-button-sm mil-arrow-place"></button>
+                                    </form>
+
+                                </div>
+                                <div class="col-md-7 col-lg-6">
+                                    <div class="row justify-content-end">
+                                        <div class="col-md-6 col-lg-7">
+
+                                            <nav class="mil-footer-menu mil-mb-60">
+                                                <ul>
+                                                    <li class="mil-up">
+                                                        <a href="index.html">Início</a>
+                                                    </li>
+                                                    <li class="mil-up">
+                                                        <a href="index.html#estudio">Estúdio</a>
+                                                    </li>
+                                                    <li class="mil-up">
+                                                        <a href="index.html#servicos">Serviços</a>
+                                                    </li>
+                                                    <li class="mil-up">
+                                                        <a href="contact.html">Contato</a>
+                                                    </li>
+                                                    <li class="mil-up mil-active">
+                                                        <a href="blog.html">Blog</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+
+                                        </div>
+                                        <div class="col-md-6 col-lg-5">
+
+                                            <ul class="mil-menu-list mil-up mil-mb-60">
+                                                <li><a href="index.html#clientes" class="mil-light-soft">Clientes</a></li>
+                                                <li><a href="https://www.instagram.com/agenciabrandforce/" target="_blank" rel="noopener" class="mil-light-soft">Instagram</a></li>
+                                                <li><a href="https://www.facebook.com/profile.php?id=61592100826465" target="_blank" rel="noopener" class="mil-light-soft">Facebook</a></li>
+                                                <li><a href="https://www.linkedin.com/company/agencia-brand-force/" target="_blank" rel="noopener" class="mil-light-soft">LinkedIn</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-between flex-sm-row-reverse">
+                                <div class="col-md-7 col-lg-6">
+
+                                    <div class="row justify-content-between">
+
+                                        <div class="col-md-6 col-lg-5 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-up mil-mb-30">Rio de Janeiro</h6>
+
+                                            <p class="mil-light-soft mil-up">Brasil <span class="mil-no-wrap">contato@brandforce.rio.br</span></p>
+
+                                        </div>
+                                        <div class="col-md-6 col-lg-5 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-up mil-mb-30">Internacional</h6>
+
+                                            <p class="mil-light-soft mil-up">Atendimento em português e inglês <span class="mil-no-wrap">PT · EN</span></p>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4 col-lg-6 mil-mb-60">
+
+                                    <div class="mil-vert-between">
+                                        <div class="mil-mb-30">
+                                            <ul class="mil-social-icons mil-up">
+                                                <li><a href="https://www.instagram.com/agenciabrandforce/" target="_blank" rel="noopener" class="social-icon"> <i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="https://www.facebook.com/profile.php?id=61592100826465" target="_blank" rel="noopener" class="social-icon"> <i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="https://www.linkedin.com/company/agencia-brand-force/" target="_blank" rel="noopener" class="social-icon"> <i class="fab fa-linkedin-in"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <p class="mil-light-soft mil-up">© Copyright <span id="footerYear">2026</span> - Brand Force. Todos os direitos reservados.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- footer end -->
+
+            </div>
+        </div>
+        <!-- content -->
+    </div>
+    <!-- wrapper end -->
+
+    <!-- jQuery js -->
+    <script src="js/plugins/jquery.min.js"></script>
+    <!-- swup js -->
+    <script src="js/plugins/swup.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/plugins/swiper.min.js"></script>
+    <!-- fancybox js -->
+    <script src="js/plugins/fancybox.min.js"></script>
+    <!-- gsap js -->
+    <script src="js/plugins/gsap.min.js"></script>
+    <!-- scroll smoother -->
+    <script src="js/plugins/smooth-scroll.js"></script>
+    <!-- scroll trigger js -->
+    <script src="js/plugins/ScrollTrigger.min.js"></script>
+    <!-- scroll to js -->
+    <script src="js/plugins/ScrollTo.min.js"></script>
+    <!-- ashley js -->
+    <script src="js/main.js"></script>
+    <!-- brand force js -->
+    <script>window.BF_LANG='pt'; window.BF_PREFIX='';</script>
+    <script src="js/site.js"></script>
+
+</body>
+
+</html>

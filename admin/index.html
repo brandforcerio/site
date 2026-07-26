@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel do blog — Brand Force</title>
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- ===================== PORTÃO DE SENHA LOCAL ===================== -->
+<div class="admin-wrap gate" id="gateScreen">
+  <div class="admin-card">
+    <img src="../img/logo/icon-color-dark-bg.png" alt="Brand Force" width="90" height="99" style="height:32px; width:auto; margin-bottom:1rem;">
+    <h2 id="gateTitle">Acesso ao painel</h2>
+    <div class="field"><input type="password" id="gatePass" placeholder="Senha de acesso" autocomplete="off"></div>
+    <button class="btn btn-primary" id="gateBtn" style="width:100%; justify-content:center;">Entrar</button>
+    <div class="msg" id="gateMsg"></div>
+    <small class="hint">Esta senha é só uma barreira de acesso local (fica salva, com hash, apenas neste navegador). A publicação de verdade só acontece com um token do GitHub — veja o passo 2 depois de entrar.</small>
+  </div>
+</div>
+
+<!-- ===================== PAINEL ===================== -->
+<div class="admin-wrap hidden" id="panelScreen">
+  <div style="margin-bottom:2rem; display:flex; align-items:center; gap:.6rem;">
+    <img src="../img/logo/icon-color-dark-bg.png" alt="Brand Force" width="90" height="99" style="height:28px; width:auto;">
+    <span style="font-family:var(--f-display); font-weight:700; font-size:1.05rem; color:var(--paper);">Painel do blog</span>
+  </div>
+
+  <div class="admin-card">
+    <h2>1. Conectar ao repositório do GitHub</h2>
+    <div class="field">
+      <label>Idioma do blog que você vai editar</label>
+      <select id="cfgLang">
+        <option value="pt">Português (data/posts.pt.json)</option>
+        <option value="en">English (data/posts.en.json)</option>
+        <option value="et">Eesti (data/posts.et.json)</option>
+      </select>
+    </div>
+    <div class="field-row">
+      <div class="field"><label>Usuário / organização</label><input id="cfgOwner" placeholder="ex: lira-brandforce"></div>
+      <div class="field"><label>Repositório</label><input id="cfgRepo" placeholder="ex: brandforce-site"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label>Branch</label><input id="cfgBranch" value="main"></div>
+      <div class="field"><label>Token de acesso pessoal (PAT)</label><input id="cfgToken" type="password" placeholder="ghp_..."></div>
+    </div>
+    <button class="btn btn-primary" id="connectBtn">Conectar</button>
+    <div class="msg" id="connectMsg"></div>
+    <small class="hint">
+      O token fica só nesta aba (sessionStorage) e nunca é salvo em nenhum arquivo do site — some ao fechar o navegador.
+      Crie um token em <strong>github.com → Settings → Developer settings → Fine-grained tokens</strong>, com acesso
+      restrito a este repositório e permissão de leitura/escrita em "Contents".
+    </small>
+  </div>
+
+  <div class="admin-card hidden" id="listCard">
+    <h2>2. Posts publicados</h2>
+    <div id="postList"></div>
+  </div>
+
+  <div class="admin-card hidden" id="formCard">
+    <h2 id="formTitle">3. Novo post</h2>
+    <div class="field"><label>Título</label><input id="fTitle"></div>
+    <div class="field-row">
+      <div class="field"><label>Slug (URL)</label><input id="fSlug" placeholder="gerado automaticamente"></div>
+      <div class="field"><label>Categoria</label><input id="fCategory" placeholder="ex: Branding"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label>Autor</label><input id="fAuthor" value="Equipe Brand Force"></div>
+      <div class="field"><label>Data</label><input id="fDate" type="date"></div>
+    </div>
+    <div class="field"><label>Imagem de capa (URL, opcional)</label><input id="fCover" placeholder="https://..."></div>
+    <div class="field"><label>Resumo (aparece nos cards)</label><input id="fExcerpt"></div>
+    <div class="field"><label>Conteúdo (HTML simples: &lt;p&gt;, &lt;h2&gt;, &lt;ul&gt;&lt;li&gt;)</label><textarea id="fContent"></textarea></div>
+    <div style="display:flex; gap:.8rem;">
+      <button class="btn btn-primary" id="saveBtn">Publicar / salvar</button>
+      <button class="btn btn-ghost-dark" id="newBtn">Limpar / novo post</button>
+    </div>
+    <div class="msg" id="formMsg"></div>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

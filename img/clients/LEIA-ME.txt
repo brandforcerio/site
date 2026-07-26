@@ -1,0 +1,24 @@
+Logos de clientes — como adicionar os arquivos reais
+======================================================
+
+Por respeito à marca registrada de cada cliente, não reconstruímos os
+logotipos deles neste projeto. O site já está pronto para exibi-los:
+basta colocar os arquivos oficiais (fornecidos pelo próprio cliente ou
+baixados do kit de imprensa/manual de marca de cada um) exatamente
+com estes nomes, nesta mesma pasta:
+
+  prime-video.svg   (ou .png)
+  flamengo.svg      (ou .png)
+  investsmart.svg   (ou .png)
+  sesc.svg          (ou .png)
+  senac-rj.svg      (ou .png)
+
+Recomendações:
+- Prefira SVG (fica nítido em qualquer tamanho de tela).
+- Se só tiver PNG, use uma versão em fundo transparente, altura mínima
+  de ~200px.
+- Se usar .png em vez de .svg, troque a extensão no atributo "src" da
+  tag <img> correspondente em index.html (seção "Clientes").
+
+Enquanto os arquivos não existirem, o site mostra automaticamente o
+nome do cliente em texto no lugar do logo (nada quebra).

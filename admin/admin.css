@@ -1,0 +1,78 @@
+/* ==========================================================================
+   BRAND FORCE — admin/admin.css
+   Painel interno, com tema próprio (não depende do css/style.css do site,
+   que agora é o do template Ashley).
+   ========================================================================== */
+:root{
+  --ink:        #161614;
+  --ink-soft:   #232320;
+  --ink-line:   rgba(240,238,234,.14);
+  --paper:      #F0EEEA;
+  --force:      #F7931E;
+  --force-dim:  #D97D0A;
+  --f-display:  'Outfit', system-ui, sans-serif;
+  --f-mono:     ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --radius:     14px;
+  --ease:       cubic-bezier(.16,.84,.44,1);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+body{
+  margin:0; background:var(--ink); color:var(--paper); min-height:100vh;
+  font-family:'Outfit', system-ui, sans-serif; font-size:16px; line-height:1.5;
+}
+a{ color:inherit; text-decoration:none; }
+
+.btn{
+  display:inline-flex; align-items:center; gap:.6em;
+  padding:.9em 1.6em; border-radius:999px; font-weight:600; font-size:.95rem;
+  border:1px solid transparent; cursor:pointer;
+  transition:transform .3s var(--ease), background-color .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
+}
+.btn:hover{ transform:translateY(-2px); }
+.btn-primary{ background:var(--force); color:var(--ink); }
+.btn-primary:hover{ background:var(--force-dim); }
+.btn-ghost-dark{ border-color:var(--ink-line); color:var(--paper); background:transparent; }
+.btn-ghost-dark:hover{ border-color:var(--force); color:var(--force); }
+
+.admin-wrap{ max-width:880px; margin-inline:auto; padding:3.5rem 1.5rem 5rem; }
+.admin-card{ background:var(--ink-soft); border:1px solid var(--ink-line); border-radius:var(--radius); padding:2rem; margin-bottom:2rem; }
+.admin-card h2{ font-size:1.1rem; margin-bottom:1.2rem; color:var(--paper); font-family:var(--f-display); }
+.field{ margin-bottom:1.1rem; }
+.field label{ display:block; font-family:var(--f-mono); font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; color:rgba(240,238,234,.55); margin-bottom:.4rem; }
+.field input, .field textarea, .field select{
+  width:100%; background:var(--ink); border:1px solid var(--ink-line); border-radius:8px;
+  padding:.7em .9em; color:var(--paper); font-size:.92rem; font-family:inherit;
+}
+.field textarea{ min-height:180px; font-family:var(--f-mono); font-size:.82rem; resize:vertical; }
+.field-row{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.msg{ font-size:.85rem; padding:.8em 1em; border-radius:8px; margin-top:1rem; }
+.msg.ok{ background:rgba(97,197,120,.14); color:#8fe0a4; }
+.msg.err{ background:rgba(230,90,80,.14); color:#f5a9a2; }
+.post-row{ display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:.9rem 0; border-bottom:1px solid var(--ink-line); }
+.post-row:last-child{ border-bottom:0; }
+.post-row b{ font-size:.95rem; }
+.post-row span{ font-size:.78rem; color:rgba(240,238,234,.5); }
+.row-actions{ display:flex; gap:.5rem; }
+.row-actions a, .row-actions button{
+  background:none; border:1px solid var(--ink-line); color:var(--paper); border-radius:6px;
+  padding:.4em .8em; font-size:.78rem; font-family:inherit; cursor:pointer;
+}
+.row-actions a:hover, .row-actions button:hover{ border-color:var(--force); color:var(--force); }
+.gate{ max-width:380px; margin:14vh auto; text-align:center; }
+.gate input{ text-align:center; }
+small.hint{ display:block; color:rgba(240,238,234,.45); font-size:.78rem; margin-top:.6rem; line-height:1.5; }
+.hidden{ display:none !important; }
+
+.admin-topbar{ display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem; flex-wrap:wrap; gap:1rem; }
+.admin-topbar-actions{ display:flex; gap:.8rem; align-items:center; font-size:.85rem; }
+.admin-topbar-actions a{ color:rgba(240,238,234,.6); }
+.admin-topbar-actions a:hover{ color:var(--force); }
+
+.lang-tabs{ display:flex; gap:.5rem; margin-bottom:1.5rem; flex-wrap:wrap; }
+.lang-tabs a{
+  font-family:var(--f-mono); font-size:.78rem; letter-spacing:.03em;
+  padding:.5em 1em; border-radius:999px; border:1px solid var(--ink-line); color:rgba(240,238,234,.6);
+}
+.lang-tabs a:hover{ border-color:var(--force); color:var(--force); }
+.lang-tabs a.is-active{ background:var(--force); border-color:var(--force); color:var(--ink); font-weight:600; }
