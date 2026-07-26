@@ -1,12 +1,5 @@
 /* -------------------------------------------
-
-Name: 		Ruizarch
-Version:    1.0
-Developer:	Nazar Miller (millerDigitalDesign)
-Portfolio:  https://themeforest.net/user/millerdigitaldesign/portfolio?ref=MillerDigitalDesign
-
-p.s. I am available for Freelance hire (UI design, web development). email: miller.themes@gmail.com
-
+Brand Force — brandforce.rio.br
 ------------------------------------------- */
 
 $(function () {
