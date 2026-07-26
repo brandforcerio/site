@@ -184,7 +184,7 @@
         }).then(function(){
           form.reset();
         }).catch(function(){
-          window.location.href = 'mailto:contato@brandforce.rio.br?subject=Newsletter&body=' + encodeURIComponent(email);
+          window.location.href = 'mailto:brandforce.rio@gmail.com?subject=Newsletter&body=' + encodeURIComponent(email);
         });
       });
     });
@@ -212,7 +212,7 @@
         }).catch(function(){
           var subject = encodeURIComponent('Contato via site — ' + name);
           var body = encodeURIComponent(message + '\n\n' + email);
-          window.location.href = 'mailto:contato@brandforce.rio.br?subject=' + subject + '&body=' + body;
+          window.location.href = 'mailto:brandforce.rio@gmail.com?subject=' + subject + '&body=' + body;
         });
       });
     }

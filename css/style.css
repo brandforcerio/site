@@ -1201,7 +1201,7 @@ frame
 .mil-frame {
   padding: 50px 60px 60px 60px;
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   pointer-events: none;
   display: -webkit-box;
   display: -ms-flexbox;
