@@ -218,3 +218,46 @@
     }
   });
 })();
+
+/* ---------- corrige o scroll para âncoras (#estudio, #servicos, #clientes) ---------- */
+(function(){
+  function scrollToTarget(hash){
+    var target;
+    try { target = document.querySelector(hash); } catch(e){ return; }
+    if(!target) return;
+    var offset = 100;
+    if(window.gsap && window.ScrollToPlugin){
+      gsap.registerPlugin(ScrollToPlugin);
+      gsap.to(window, { duration: 1, scrollTo: { y: target, offsetY: offset }, ease: "power2.out" });
+    } else {
+      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+  }
+
+  window.addEventListener('load', function(){
+    if(location.hash) setTimeout(function(){ scrollToTarget(location.hash); }, 500);
+  });
+
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href*="#"]');
+    if(!a) return;
+    var href = a.getAttribute('href');
+    var hashIndex = href.indexOf('#');
+    if(hashIndex === -1) return;
+    var pathPart = href.slice(0, hashIndex);
+    var hashPart = href.slice(hashIndex);
+    var currentFile = location.pathname.split('/').pop() || 'index.html';
+    var isSamePage = (pathPart === '' || pathPart === currentFile);
+    if(!isSamePage) return;
+
+    var target;
+    try { target = document.querySelector(hashPart); } catch(err){ return; }
+    if(!target) return;
+
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    scrollToTarget(hashPart);
+    history.pushState(null, '', hashPart);
+  }, true);
+})();
