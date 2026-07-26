@@ -270,10 +270,11 @@
 
   function update(){
     var checkY = 70;
+    var checkX = 60;
     var overDark = false;
     darkSections.forEach(function(sec){
       var r = sec.getBoundingClientRect();
-      if(r.top <= checkY && r.bottom >= checkY) overDark = true;
+      if(r.top <= checkY && r.bottom >= checkY && r.left <= checkX && r.right >= checkX) overDark = true;
     });
     frameLogos.forEach(function(img){
       var wanted = overDark ? 'wordmark-dark-bg.png' : 'wordmark-light-bg.png';
