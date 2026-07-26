@@ -1977,7 +1977,7 @@ dodecahedron
   right: 100px;
 }
 .mil-position-1 .mil-pentagon div {
-  border-top: 0.1px solid rgb(255, 255, 255);
+  border-top: 0.1px solid rgb(247, 147, 30);
 }
 
 .mil-position-2 {
@@ -1985,7 +1985,7 @@ dodecahedron
   left: 15%;
 }
 .mil-position-2 .mil-pentagon div {
-  border-top: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid rgb(247, 147, 30);
 }
 .mil-position-2 .mil-dodecahedron {
   -webkit-animation-delay: 0.5s;
@@ -2002,7 +2002,7 @@ dodecahedron
   right: 35%;
 }
 .mil-position-3 .mil-pentagon div {
-  border-top: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid rgb(247, 147, 30);
 }
 .mil-position-3 .mil-dodecahedron {
   -webkit-animation-delay: 1s;
@@ -2019,7 +2019,7 @@ dodecahedron
   right: 20%;
 }
 .mil-position-4 .mil-pentagon div {
-  border-top: 0.1px solid rgb(255, 255, 255);
+  border-top: 0.1px solid rgb(247, 147, 30);
 }
 .mil-position-4 .mil-dodecahedron {
   -webkit-animation-delay: 0.5s;
